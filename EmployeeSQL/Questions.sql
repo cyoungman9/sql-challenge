@@ -20,3 +20,12 @@ INNER Join "Departments" as d
 ON de.dept_no = d.dept_no
 INNER Join "Employees" as e
 ON e.emp_no = de.emp_no;
+
+-- 4. 
+
+SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
+FROM "Dept_Employee" de
+INNER Join "Departments" as d
+ON de.dept_no = d.dept_no
+INNER Join "Employees" as e
+ON e.emp_no = de.emp_no;
