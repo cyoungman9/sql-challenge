@@ -29,3 +29,10 @@ INNER Join "Departments" as d
 ON de.dept_no = d.dept_no
 INNER Join "Employees" as e
 ON e.emp_no = de.emp_no;
+
+-- 5.
+
+SELECT first_name, last_name, sex
+FROM "Employees"
+WHERE first_name = 'Hercules'
+SELECT SUBSTRING(last_name, 1, "B") AS ExtractString;
