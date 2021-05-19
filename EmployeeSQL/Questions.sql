@@ -64,3 +64,8 @@ INNER Join "Employees" as e
 ON e.emp_no = de.emp_no
 WHERE d.dept_name = 'Sales'
 OR d.dept_name = 'Development';
+
+-- 8.
+
+SELECT count (last_name)
+FROM "Employees"
