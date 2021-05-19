@@ -43,3 +43,24 @@ SELECT first_name, last_name, sex
 FROM "Employees"
 WHERE first_name = 'Hercules'
 AND last_name like 'B%'
+
+-- 7. 
+
+SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
+FROM "Dept_Employee" as de
+INNER Join "Departments" as d
+ON de.dept_no = d.dept_no
+INNER Join "Employees" as e
+ON e.emp_no = de.emp_no
+WHERE d.dept_name = 'Sales';
+
+-- 8.
+
+SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
+FROM "Dept_Employee" as de
+INNER Join "Departments" as d
+ON de.dept_no = d.dept_no
+INNER Join "Employees" as e
+ON e.emp_no = de.emp_no
+WHERE d.dept_name = 'Sales'
+OR d.dept_name = 'Development';
