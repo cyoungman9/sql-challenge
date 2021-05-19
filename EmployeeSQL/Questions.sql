@@ -35,16 +35,9 @@ ON e.emp_no = de.emp_no;
 SELECT first_name, last_name, sex
 FROM "Employees"
 WHERE first_name = 'Hercules'
-SELECT SUBSTRING(last_name, 1, "B") AS ExtractString;
-
--- 6.
-
-SELECT first_name, last_name, sex
-FROM "Employees"
-WHERE first_name = 'Hercules'
 AND last_name like 'B%'
 
--- 7. 
+-- 6. 
 
 SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
 FROM "Dept_Employee" as de
@@ -54,7 +47,7 @@ INNER Join "Employees" as e
 ON e.emp_no = de.emp_no
 WHERE d.dept_name = 'Sales';
 
--- 8.
+-- 7.
 
 SELECT de.emp_no, e.first_name, e.last_name, d.dept_name
 FROM "Dept_Employee" as de
