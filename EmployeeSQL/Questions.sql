@@ -36,3 +36,10 @@ SELECT first_name, last_name, sex
 FROM "Employees"
 WHERE first_name = 'Hercules'
 SELECT SUBSTRING(last_name, 1, "B") AS ExtractString;
+
+-- 6.
+
+SELECT first_name, last_name, sex
+FROM "Employees"
+WHERE first_name = 'Hercules'
+AND last_name like 'B%'
