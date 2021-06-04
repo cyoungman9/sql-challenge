@@ -60,5 +60,8 @@ OR d.dept_name = 'Development';
 
 -- 8.
 
-SELECT count (last_name)
-FROM "Employees"
+SELECT last_name,
+COUNT(last_name)
+FROM "Employees" 
+Group by last_name
+Order by Count(last_name) desc;
